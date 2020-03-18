@@ -1,0 +1,17 @@
+/*  1.  Descreva em no máximo 200 palavras o que é um automóvel e o que ele faz. Liste os substantivos e verbos separadamente. 
+Cada substantivo corresponde a um objeto que precisará ser construído para implementar um sistema, nesse caso, um carro. 
+Selecione 5 dos objetos que você listou e, para cada um, liste vários atributos e comportamentos. Descreva brevemente como 
+esses objetos interagem entre si e com outros objetos na sua descrição. Estes passos que você seguiu são típicos do projeto
+orientado a objetos. */
+
+Automóvel: Também chamado de carro, o automóvel é um veículo motorizado sobre rodas, tendo como finalidade o transporte. 
+           Possui quatro rodas, duas ou quatro portas, espaço para cinco pessoas e no mínimo quatro faróis. 
+           Para controlar a velocidade, utiliza um freio e um acelerador.
+
+Rodas: podem ser entendidas como as pernas do carro, pois são elas que fazem com que o mesmo se movimente sobre o solo. 
+Portas: são o meio pelo qual os indivíduos usam para entrar e sair do carro. 
+Faróis: são os "olhos" do carro, pois são eles que possibilitam que os olhos do motorista vejam o caminho a ser seguido. Ainda, podem
+        ser entendidos como sinalizador, pois em estradas os mesmos servem para mostrar que um carro se aproxima, através dos feixes luminosos.
+Freio: uma vez que avistado perigo, como um carro vindo em sua direção, ou até mesmo qualquer motivo para parar, utiliza-se o freio, 
+       meio pelo qual o motorista pode ter controle sobre o carro, parando-o. 
+Acelerador: ao contrário do freio, serve para iniciar o movimento do carro ou aumentar sua velocidade, quando já há movimento. 
