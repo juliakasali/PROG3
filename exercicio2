@@ -1,0 +1,83 @@
+/* A fim de representar empregados em uma empresa, crie uma classe chamada Empregado que inclui as três informações a seguir como atributos:
+
+• um primeiro nome, 
+• um sobrenome, e 
+• um salário mensal. 
+
+Sua classe deve ter um construtor (veja sobre este método especial na apostila pág. 6, e nos vídeos [1] e [2]) que inicializa 
+os três atributos. Forneça um método set e get para cada atributo. Se o salário mensal não for positivo, configure-o como 0.0.
+Escreva um código de teste que demonstra as capacidades da classe. Crie duas instâncias da classe e exiba o salário anual de 
+cada instância. Então dê a cada empregado um aumento de 10% e exiba novamente o salário anual de cada empregado.  */
+
+<?php
+  
+    class Empregados{
+      public $primeiro_nome;
+      public $sobrenome;
+      public $salario_mensal; 
+      public $salario_anual;
+      
+      public function_construct(){
+        $this -> primeiro_nome = "Julia";
+        $this -> sobrenome = "Lima";
+        $this -> salario_mensal = 1000.00;
+      }
+      public function setPrimeiro_nome($result){
+        return $this -> primeiro_nome = $result; 
+      }
+      public function setSobrenome($result1){
+        return $this -> sobrenome = $result1; 
+      }
+      public function setSalario_mensal($result2){
+        return $this -> salario_mensal = $result2; 
+      }
+      public function setSalario_anual(){
+        return $this -> salario_anual = $this -> salario_mensal * 12;
+      }
+      public function getPrimeiro_nome(){
+        return $this -> primeiro_nome;
+      }
+      public function getSobrenome(){
+        return $this -> sobrenome;
+      }
+      public function getSalario_mensal(){
+        return $this -> salario_mensal;
+      }
+      public function getSalario_anual(){
+        return $this -> salario_anual;
+      }
+      public function validaSalario_mensal(){
+        if($this -> salario_mensal < 0){
+          $this -> salario_mensal = 0.0;
+        }
+      }
+      public function aumentaSalario_mensal(){
+        $a = ($this -> salario_mensal * 10)/100;
+        $this -> salario_mensal = $this -> salario_mensal + $a; 
+      }
+    
+    }
+    
+    // 1° empregado
+    $empregado1 = new Empregados();
+    $empregado1 -> validaSalario_mensal();
+    $empregado1 -> setSalario_anual();
+    echo "o salário anual de {$empregado1 -> getPrimeiro_nome()} {$empregado1 -> getSobrenome} é R$ {$empregado1 -> getSalario_anual()}";
+    $empregado1 -> aumentaSalario_mensal();
+    $empregado1 -> setSalario_anual();
+    echo "o salário anual de {$empregado1 -> getPrimeiro_nome()} {$empregado1 -> getSobrenome} recebeu aumento de 10% e passou a ser R$ {$empregado1 -> getSalario_anual}";
+    
+    //2° empregado
+    $empregado2 = new Empregados();
+    $empregado2 -> setPrimeiro_nome("Cecília");
+    $empregado2 -> setSobrenome("Kasali");
+    $empregado2 -> setSalario_mensal(1000);
+    $empregado2 -> validaSalario_mensal();
+    $empregado2 -> setSalario_anual();
+    echo "o salário anual de {$empregado2 -> getPrimeiro_nome()} {$empregado2 -> getSobrenome()} é R$ {$empregado2 -> getSalario_anual()}";
+    $empregado2 -> aumentaSalario_mensal();
+    $empregado2 -> setSalario_anual();
+    echo "o salário anual de {$empregado2 -> getPrimeiro_nome()} recebeu aumento de 10% e passou a ser R$ {$empregado2 -> getSalario_anual()}";
+    
+
+?>
