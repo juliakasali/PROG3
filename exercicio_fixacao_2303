@@ -1,0 +1,43 @@
+<?php
+
+class Carro{
+  public $modelo;
+  public $velocidade_maxima;
+  public $velocidade_atual;
+
+public function Carro($mod,$vel_med){
+  $this -> modelo = $mod;
+  $this -> velocidade_maxima = $vel_med;
+  echo "{$this -> setModelo()}";
+  $this -> ligarCarro();
+  $this -> acelerar();
+  $this -> reduzir();
+  $this -> pararCarro();
+  $this -> desligarCarro();
+}
+  public function ligarCarro(){
+    echo "Carro ligado";
+  }
+  public function desligarCarro(){
+    echo "Carro desligado";
+  }
+  public function setModelo(){
+    return $this -> modelo;
+  }
+  public function acelerar(){
+    $this -> velocidade_atual = $this -> velocidade_maxima;
+    echo "Acelerando - velocidade = {$this -> velocidade_atual} km/h";
+  }
+  public function reduzir(){
+    $this -> velocidade_atual = $this -> velocidade_atual/2;
+    echo "Reduzindo - Velocidade = {$this -> velocidade_atual} km/h";
+  }
+  public function pararCarro(){
+    $this -> velocidade_atual = 0;
+    echo "Carro parado - Velocidade = {$this -> velocidade_atual} km/h";
+  }
+}
+
+$carro1 = new Carro("gol", 88);
+
+?>
